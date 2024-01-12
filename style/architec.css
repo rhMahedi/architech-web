@@ -15,6 +15,11 @@
 
 }
 
+.banner-descrption {
+  color: var(--Dark-03, #727272);
+  line-height: 26px;
+}
+
 /* shyare style ending */
 
 * {
@@ -76,31 +81,79 @@ nav li a {
 
 }
 
-.banner-descrption {
-  color: var(--Dark-03, #727272);
-  line-height: 26px;
-}
-.banner img{
+.banner img {
   width: 100%;
   margin-top: 25px;
 }
+
+/* main section start  */
+main {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.img-write-container {
+  display: flex;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.img-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.write-container {
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.write-content-title {
+  font-size: 45px;
+}
+
+.quick {
+  color: var(--Dark-03, #727272);
+  font-weight: 500;
+}
+
+.write-feat {
+  color: #FF900E;
+  font-weight: 700;
+
+}
+
+
 /* responsive design part  */
 
 /* mobile responsive  */
 @media screen and (max-width: 576px) {
-  header{
+  header {
     padding: 20px;
   }
-  nav{
+
+  nav,
+  .img-write-container {
     flex-direction: column;
   }
+  .img-container{
+    grid-template-columns: 1fr;
+  }
+  
+.write-container {
+ padding-left: 20px;
+ padding-right: 20px;
 }
+}
+
 /* tablet responsive  */
-@media screen and (min-width: 577px) and (max-width:960px){
-  nav{
+@media screen and (min-width: 577px) and (max-width:960px) {
+  nav, .img-write-container {
     flex-direction: column;
   }
-  header{
+
+  header {
     padding: 50px;
   }
 }
